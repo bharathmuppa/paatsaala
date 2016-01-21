@@ -1,0 +1,139 @@
+
+<div class="container-fluid hundi_hd clearfix menu-bar">
+	<div class="container">
+		<!-- <div class="col-xs-12"> eHundi Offering <span>ehundi is exclusively offer for donations only</span> </div> -->
+		<div class="scroller scroller-left">
+			<i class="glyphicon glyphicon-chevron-left"></i>
+		</div>
+		<div class="scroller scroller-right">
+			<i class="glyphicon glyphicon-chevron-right"></i>
+		</div>
+		<div class="wrapper">
+			<ul class="nav nav-tabs list" id="myTab">
+				<li class="active">
+					<a href="#home">eSpecial Entry</a>
+				</li>
+				<li>
+					<a href="#profile">eSeva</a>
+				</li>
+				<li>
+					<a href="#messages">eAccommodation</a>
+				</li>
+				<li>
+					<a href="#settings">eSudarsanam</a>
+				</li>
+				<li>
+					<a href="#">eHundi</a>
+				</li>
+				<li>
+					<a href="#">eDonation</a>
+				</li>
+				<li>
+					<a href="#">Saptagiri Magazine</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+</div>
+<div class="container">
+	<div class="col-sm-12 cnt">
+		<nav class="side_nav">
+			<ul class="col-sm-12 log_info" ng-if = "bdc.pageDetails.isLoggedIn === false ">
+				<li class="col-sm-3 text-center gap-rt-none gap-lt-5">
+					<img src="content/img/user.png" alt="user" class="img-responsive img-circle dis-inline" >
+				</li>
+				<li class="col-sm-9 text-center-xs gap-lt-5">
+					<strong>Ramarao</strong><span class="small text-muted">Your Last Login</span><span class="small text-muted">10:00 AM JUNE 2nd 2015</span>
+					<div class="clearfix row user-options">
+						<div class="col-xs-6 settings">
+							Settings
+						</div>
+						<div class="col-xs-6 logout">
+							Logout
+						</div>
+					</div>
+				</li>
+			</ul>
+			<ul class="nav">
+				<li>
+					<a  href="#" class="eSpecial">eSpecial Entry Darshan</a>
+				</li>
+				<li>
+					<a href="#" class="eSudarshanam">eSudarshanam</a>
+				</li>
+				<li>
+					<a href="#" class="eSeva">eSeva</a>
+				</li>
+				<li>
+					<a  href="#" class="EAccommodation">EAccommodation</a>
+				</li>
+				<li>
+					<a href="#" class="eDonation">eDonation</a>
+				</li>
+				<li>
+					<a href="#" class="eHundi">eHundi</a>
+				</li>
+				<li>
+					<a href="#" class="eSaptagiri">eSaptagiri Magzine</a>
+				</li>
+				<li>
+					<a href="#" class="Booking">Booking History</a>
+				</li>
+			</ul>
+		</nav>
+		<script>
+			$('.menu').click(function() {
+				if($('.side_nav').css("right") == "-284px") {
+					$('.cnt').css('overflow', 'visible');
+					$('.side_nav').animate({
+						right : "-5px"
+					});
+
+				} else {
+					$('.cnt').css('overflow', 'hidden');
+					$('.side_nav').animate({
+						right : "-284px"
+					});
+
+				}
+				$('.side_nav').css('top', -$('.hundi_hd').outerHeight());
+			});
+
+		</script>
+		<div id="content">
+			<figure class="acknw_hd">
+				<img src="content/img/TTD-Logo.png" width="70px" class="pull-left">
+				<figcaption class="hd_txt1 pull-left">
+					Tirumala Tirupati Devasthanams <span>e - Services</span>
+				</figcaption>
+			</figure>
+			<div class="col-md-12 col-xs-12 ackw_details">
+				<span class="col-xs-12"> Transaction ID: <b ng-bind="ehac.userData.transactionID"></b> </span>
+				<span class="col-xs-12"> Date:{{ehac.userData.timeStamp}} </span>
+			</div>
+			<div class="col-md-12 col-xs-12 cnt_inr">
+				<h3 class="text-center">Acknolodgement Receipt</h3>
+				<p class="col-xs-12 mtop_60">
+					Received with thanks a sum of Rs {{ehac.userData.amount}} through Payment Gateway over the Internet from name of {{ehac.userData.name}}, Towards eHundi
+				</p>
+				<p class="col-xs-12">
+					Payment acknowlodgement genarated through Online Portal on <b ng-bind="ehac.userData.date"></b> Time:{{ehac.userData.timeS}}.
+					<br>
+					Degitally signed Premium Receipt sent by email
+				</p>
+				<p class="col-xs-12">
+					This receipt is electronically generated.
+				</p>
+			</div>
+		</div>
+		<div class="col-md-12 col-xs-12 text-right btn_cnt">
+			<button class="btn">
+				Save As Pdf
+			</button>
+			<button class="btn btn-act">
+				Continue
+			</button>
+			
+		</div>
+	</div>
+</div>

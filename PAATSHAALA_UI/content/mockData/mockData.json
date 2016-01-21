@@ -1,0 +1,34 @@
+http://172.25.156.43:8080/eHundi/common/banks/
+{"bankList":[{"pgId":1,"createdBy":null,"createdTime":"2015-09-23","paymentGatewayName":"ICICI","rowStatus":null,"updatedBy":null,"updatedTime":null},{"pgId":2,"createdBy":null,"createdTime":"2015-09-23","paymentGatewayName":"AB","rowStatus":null,"updatedBy":null,"updatedTime":null}]}
+
+http://172.25.156.43:8080/eHundi/common/countriesAndStates/
+{"countries":[{"id":1001,"country_name":"India","states":[{"id":103,"state_name":"Andhra Pradesh"},{"id":101,"state_name":"Maharashtra"},{"id":102,"state_name":"Gujrat"}]},{"id":1003,"country_name":"UK","states":[]}]}
+
+http://172.25.156.43:8080/eHundi/common/currency
+{"currencyList":[{"currencyId":100,"createdBy":100,"createdTime":null,"currencyName":"dollar","rowStatus":null,"updatedBy":null,"updatedTime":null},{"currencyId":2,"createdBy":200,"createdTime":"2015-09-22","currencyName":"rupee","rowStatus":null,"updatedBy":null,"updatedTime":null},{"currencyId":3,"createdBy":300,"createdTime":"2015-09-22","currencyName":"GBP","rowStatus":null,"updatedBy":null,"updatedTime":null},{"currencyId":4,"createdBy":400,"createdTime":"2015-09-22","currencyName":"INR","rowStatus":null,"updatedBy":null,"updatedTime":null}]}
+
+http://172.25.156.43:8080/eHundi/common/userHistory/1
+{"userHistoryList":[{"referenceNo":50000501,"remarks":null,"amount":10000,"offeringDate":"2015-09-23"},{"referenceNo":50000502,"remarks":null,"amount":10000,"offeringDate":"2015-09-23"},{"referenceNo":50000601,"remarks":null,"amount":10000,"offeringDate":"2015-09-23"}]}
+
+
+
+POST Request
+***************************************************
+http://172.25.156.43:8080/eHundi/eHundi/eHundiUser/
+Request:
+{
+"piligrimFirstName":"Vikramkumarreddy",
+"piligrimLastName":"",
+"offeringAmount":"10000",
+"piligrimEmail":"vikram@tcs.com",
+"piligrimPhoneMobile":"9848022338",
+"currencyID":"4",
+"piligrimAddressLine1":"23-2-2 x colony",
+"piligrimAddressLine2":"kjc nagar",
+"piligrimCity":"Hyderabad",
+"piligrimZipCode":"500089",
+"onBehalfOf":"self",
+"userId": ""
+}
+Response: transaction ID
+2114579930

@@ -1,0 +1,32 @@
+@media (max-width:767px){
+	header nav{height: auto; margin-top:10px}
+	.text-center-xs{text-align:center}
+	.usrinfo_cnt > section{padding-left:15px; }
+	.usrinfo_cnt figure{position:static;text-align: center;
+    width: 100%;}
+	.user-options{margin:0;}
+	
+	.table-responsive{overflow:visible;}
+	.table thead{display:none;}
+	.table tbody tr:nth-child(even) td{background:#f9f9f9;}
+	.table td:first-child{background:#febb18 !important}
+	.table td{display:block; padding-left:48% !important; position:relative}
+	.table td:before{content:attr(data-name); position:absolute; left:15px; font-weight:bold}
+
+.rwd-tabs{display:block; margin:10px 10px 10px 0; padding:0;}
+.rwd-tabs li{float:left; padding:10px 15px; display:inline-block; cursor:pointer}
+.rwd-tabs li.active{background:#febb18;}
+.respAcc div[data-tab]{display:none}
+.respAcc div.active[data-tab]{display:block}
+.respAcc div[data-tab] > div:first-child{display:none}
+.respAcc div[data-tab] > div:last-child{display:block}
+
+
+.menu{width:auto;background:none; border-radius:0;}
+.menu > div{display: none;}
+.menu img{margin:0;}
+header nav > .nav{float:left !important;}
+header .nav li > a{padding-left: 15px !important;}
+header .nav li > a:before{content:'' !important; }
+	
+}

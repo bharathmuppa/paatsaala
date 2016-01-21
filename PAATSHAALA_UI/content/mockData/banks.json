@@ -1,0 +1,23 @@
+{
+	"data": {
+		"bankList": [
+			{
+				"pgId": 1,
+				"createdBy": null,
+				"createdTime": "2015-09-23",
+				"paymentGatewayName": "ICICI",
+				"rowStatus": null,
+				"updatedBy": null,
+				"updatedTime": null
+			}, {
+				"pgId": 2,
+				"createdBy": null,
+				"createdTime": "2015-09-23",
+				"paymentGatewayName": "AB",
+				"rowStatus": null,
+				"updatedBy": null,
+				"updatedTime": null
+			}
+		]
+	}
+}

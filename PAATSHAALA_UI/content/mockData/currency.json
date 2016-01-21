@@ -1,0 +1,37 @@
+{
+	"currencyList": [
+		{
+			"currencyId": 100,
+			"createdBy": 100,
+			"createdTime": null,
+			"currencyName": "dollar",
+			"rowStatus": null,
+			"updatedBy": null,
+			"updatedTime": null
+		}, {
+			"currencyId": 2,
+			"createdBy": 200,
+			"createdTime": "2015-09-22",
+			"currencyName": "rupee",
+			"rowStatus": null,
+			"updatedBy": null,
+			"updatedTime": null
+		}, {
+			"currencyId": 3,
+			"createdBy": 300,
+			"createdTime": "2015-09-22",
+			"currencyName": "GBP",
+			"rowStatus": null,
+			"updatedBy": null,
+			"updatedTime": null
+		}, {
+			"currencyId": 4,
+			"createdBy": 400,
+			"createdTime": "2015-09-22",
+			"currencyName": "INR",
+			"rowStatus": null,
+			"updatedBy": null,
+			"updatedTime": null
+		}
+	]
+}

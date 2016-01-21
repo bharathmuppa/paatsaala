@@ -1,0 +1,250 @@
+
+<div class="container-fluid hundi_hd clearfix menu-bar">
+	<div class="container">
+		<!-- <div class="col-xs-12"> eHundi Offering <span>ehundi is exclusively offer for donations only</span> </div> -->
+		<div class="scroller scroller-left">
+			<i class="glyphicon glyphicon-chevron-left"></i>
+		</div>
+		<div class="scroller scroller-right">
+			<i class="glyphicon glyphicon-chevron-right"></i>
+		</div>
+		<div class="wrapper">
+			<ul class="nav nav-tabs list" id="myTab">
+				<li class="active">
+					<a href="#home">eSpecial Entry</a>
+				</li>
+				<li>
+					<a href="#profile">eSeva</a>
+				</li>
+				<li>
+					<a href="#messages">eAccommodation</a>
+				</li>
+				<li>
+					<a href="#settings">eSudarsanam</a>
+				</li>
+				<li>
+					<a href="#">eHundi</a>
+				</li>
+				<li>
+					<a href="#">eDonation</a>
+				</li>
+				<li>
+					<a href="#">Saptagiri Magazine</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+</div>
+<div class="container">
+	<div class="col-sm-12 cnt">
+		<nav class="side_nav">
+			<ul class="col-sm-12 log_info" ng-if = "bdc.pageDetails.isLoggedIn === false ">
+				<li class="col-sm-3 text-center gap-rt-none gap-lt-5">
+					<img src="content/img/user.png" alt="user" class="img-responsive img-circle dis-inline" >
+				</li>
+				<li class="col-sm-9 text-center-xs gap-lt-5">
+					<strong>Ramarao</strong><span class="small text-muted">Your Last Login</span><span class="small text-muted">10:00 AM JUNE 2nd 2015</span>
+					<div class="clearfix row user-options">
+						<div class="col-xs-6 settings">
+							Settings
+						</div>
+						<div class="col-xs-6 logout">
+							Logout
+						</div>
+					</div>
+				</li>
+			</ul>
+			<ul class="nav">
+				<li>
+					<a  href="#" class="eSpecial">eSpecial Entry Darshan</a>
+				</li>
+				<li>
+					<a href="#" class="eSudarshanam">eSudarshanam</a>
+				</li>
+				<li>
+					<a href="#" class="eSeva">eSeva</a>
+				</li>
+				<li>
+					<a  href="#" class="EAccommodation">EAccommodation</a>
+				</li>
+				<li>
+					<a href="#" class="eDonation">eDonation</a>
+				</li>
+				<li>
+					<a href="#" class="eHundi">eHundi</a>
+				</li>
+				<li>
+					<a href="#" class="eSaptagiri">eSaptagiri Magzine</a>
+				</li>
+				<li>
+					<a href="#" class="Booking">Booking History</a>
+				</li>
+			</ul>
+		</nav>
+		<script>
+			$('.menu').click(function() {
+				if($('.side_nav').css("right") == "-284px") {
+					$('.cnt').css('overflow', 'visible');
+					$('.side_nav').animate({
+						right : "-5px"
+					});
+
+				} else {
+					$('.cnt').css('overflow', 'hidden');
+					$('.side_nav').animate({
+						right : "-284px"
+					});
+
+				}
+				$('.side_nav').css('top', -$('.hundi_hd').outerHeight());
+			});
+
+		</script>
+		<div class="panel-group History-Acc respAcc" id="accordion" role="tablist" aria-multiselectable="true">
+			<ul class="rwd-tabs clearfix">
+				<li class="active" id="currentTab">
+					Current
+				</li>
+				<li id="archiveTab">
+					Archive
+				</li>
+			</ul>
+			<div class="clearfix active" data-tab="currentTab">
+				<div class="col-xs-12 usrinfo_cnt formmargin" role="tab" id="headingOne">
+					<h5 class="col-sm-12 pay clearfix" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne"> Current</h5>
+				</div>
+				<div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+					<div class="table-responsive">
+						<table class="table">
+							<thead>
+								<tr>
+									<th>S.No</th>
+									<th>Date</th>
+									<th>Amount</th>
+									<th>Reference No</th>
+									<th>Remarks</th>
+									<th>Refund Status</th>
+									<th>Receipt</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr ng-repeat="hist in ehhc.pageDetails.historyList" ng-if="$index+1 <11">
+									<td data-name="S.No"> {{$index+1}}</td>
+									<td data-name="Date">{{hist.offeringDate}}</td>
+									<td data-name="Amount">{{hist.amount}}</td>
+									<td data-name="Reference No">{{hist.referenceNo}}</td>
+									<td data-name="Remarks">{{hist.remarks}}</td>
+									<td data-name="Refund Status">NA</td>
+									<td data-name="receipt"><a href="">{{hist.referenceNo}}</a></td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+			<div class="clearfix" data-tab="archiveTab">
+				<div class="col-xs-12 usrinfo_cnt formmargin" role="tab" id="headingOne">
+					<h5 class="col-sm-12 pay clearfix collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo"> Archive</h5>
+				</div>
+				<div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+					<div class="table-responsive">
+						<table class="table">
+							<thead>
+								<tr>
+									<th>S.No</th>
+									<th>Date</th>
+									<th>Amount</th>
+									<th>Reference No</th>
+									<th>Remarks</th>
+									<th>Refund Status</th>
+									<th>Receipt</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr ng-repeat="hist in ehhc.pageDetails.historyList" ng-if="$index+1 > 10">
+									<td> {{$index+1}}</td>
+									<td>{{hist.offeringDate}}</td>
+									<td>{{hist.amount}}</td>
+									<td>{{hist.referenceNo}}</td>
+									<td>{{hist.remarks}}</td>
+									<td>Refund Status</td>
+									<td data-name="receipt"><a href="">{{hist.referenceNo}}</a></td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<script>
+	var hidWidth;
+	var scrollBarWidths = 40;
+
+	var widthOfList = function() {
+		var itemsWidth = 0;
+		$('.list li').each(function() {
+			var itemWidth = $(this).outerWidth();
+			itemsWidth += itemWidth;
+		});
+		return itemsWidth;
+	};
+	var widthOfHidden = function() {
+		return (($('.wrapper').outerWidth()) -   widthOfList() -   getLeftPosi()) - scrollBarWidths;
+	};
+	var getLeftPosi = function() {
+		return $('.list').position().left;
+	};
+	var reAdjust = function() {
+		if(($('.wrapper').outerWidth()) < widthOfList()) {
+			$('.scroller-right').show();
+		} else {
+			$('.scroller-right').hide();
+		}
+
+		if(getLeftPosi() < 0) {
+			$('.scroller-left').show();
+		} else {
+			$('.item').animate({
+				left : "-=" + getLeftPosi() + "px"
+			}, 'slow');
+			$('.scroller-left').hide();
+		}
+	}
+	reAdjust();
+
+	$(window).on('resize', function(e) {
+		reAdjust();
+	});
+	$('.scroller-right').click(function() {
+
+		$('.scroller-left').fadeIn('slow');
+		$('.scroller-right').fadeOut('slow');
+
+		$('.list').animate({
+			left : "+=" + widthOfHidden() + "px"
+		}, 'slow', function() {
+
+		});
+	});
+	$('.scroller-left').click(function() {
+
+		$('.scroller-right').fadeIn('slow');
+		$('.scroller-left').fadeOut('slow');
+
+		$('.list').animate({
+			left : "-=" + getLeftPosi() + "px"
+		}, 'slow', function() {
+
+		});
+	});
+	$('.rwd-tabs > li').click(function() {
+		$('.rwd-tabs > li').removeClass('active');
+		$(this).addClass('active');
+		$('div[data-tab]').removeClass('active');
+		var a = $(this).attr("id");
+		$('div[data-tab='+a+']').addClass('active');
+	});
+
+</script>

@@ -1,0 +1,175 @@
+<div class="container-fluid hundi_hd clearfix">
+	<div class="container">
+		<div class="col-xs-12">
+			eHundi Offering <span>ehundi is exclusively offer for donations only</span>
+		</div>
+	</div>
+</div>
+<div class="container">
+	<div class="col-sm-12 cnt">
+		<nav class="side_nav">
+			<ul class="col-sm-12 log_info" ng-if = "bdc.pageDetails.isLoggedIn === false ">
+				<li class="col-sm-3 text-center gap-rt-none gap-lt-5">
+					<img src="content/img/user.png" alt="user" class="img-responsive img-circle dis-inline" >
+				</li>
+				<li class="col-sm-9 text-center-xs gap-lt-5">
+					<strong>Ramarao</strong><span class="small text-muted">Your Last Login</span><span class="small text-muted">10:00 AM JUNE 2nd 2015</span>
+					<div class="clearfix row user-options">
+						<div class="col-xs-6 settings">
+							Settings
+						</div>
+						<div class="col-xs-6 logout">
+							Logout
+						</div>
+					</div>
+				</li>
+			</ul>
+			<ul class="nav">
+				<li>
+					<a  href="#" class="eSpecial">eSpecial Entry Darshan</a>
+				</li>
+				<li>
+					<a href="#" class="eSudarshanam">eSudarshanam</a>
+				</li>
+				<li>
+					<a href="#" class="eSeva">eSeva</a>
+				</li>
+				<li>
+					<a  href="#" class="EAccommodation">EAccommodation</a>
+				</li>
+				<li>
+					<a href="#" class="eDonation">eDonation</a>
+				</li>
+				<li>
+					<a href="#" class="eHundi">eHundi</a>
+				</li>
+				<li>
+					<a href="#" class="eSaptagiri">eSaptagiri Magzine</a>
+				</li>
+				<li>
+					<a href="#" class="Booking">Booking History</a>
+				</li>
+			</ul>
+		</nav>
+		<script>
+			$('.menu').click(function() {
+				if($('.side_nav').css("right") == "-284px") {
+					$('.cnt').css('overflow', 'visible');
+					$('.side_nav').animate({
+						right : "-5px"
+					});
+
+				} else {
+					$('.cnt').css('overflow', 'hidden');
+					$('.side_nav').animate({
+						right : "-284px"
+					});
+
+				}
+				$('.side_nav').css('top', -$('.hundi_hd').outerHeight());
+			});
+
+		</script>
+		<div class="col-sm-12 usrinfo_cnt clearfix">
+			<figure>
+				<img src="content/img/user.png" alt="user"/>
+			</figure>
+			<section class="col-sm-9">
+				<div class="name">
+					<strong ng-bind="ehprc.pageDetails.userData.piligrimFirstName"></strong>
+				</div>
+				<div class="row clearfix personal-details">
+					<span class="col-md-3 col-sm-6 col-xs-12 pull-left phone clearfix" ng-bind="ehprc.pageDetails.userData.piligrimPhoneMobile"></span>
+					<span class="col-md-4 col-sm-6 col-xs-12 pull-left email clearfix" ng-bind="ehprc.pageDetails.userData.piligrimEmail"></span>
+					<span class="col-md-5 col-sm-12 col-xs-12 pull-left address clearfix">{{ehprc.pageDetails.userData.piligrimAddressLine1}},{{ehprc.pageDetails.userData.piligrimAddressLine2}}</span>
+				</div>
+			</section>
+		</div>
+		<div class="col-sm-12 usrinfo_cnt clearfix pay_details">
+			<form name="userForm">
+			<div class="form-group styled-input col-md-4 col-xs-12">
+					<input type="number" class="form-control" ng-model="ehprc.pageDetails.userData.offeringAmount"
+					name="amountS" min="11" max="999999" required />
+					<label
+					class="control-label" for="inputLarge">Amount<sup
+						class="text-danger">*</sup></label>
+					<div class="help-block err">
+						<span
+						ng-show="submitted  || (userForm.amountS.$dirty && userForm.amountS.$invalid)"> <span ng-show="userForm.amountS.$error.required">This
+								field cannot be empty.</span> <span
+							ng-show="userForm.amountS.$error.min || userForm.amountS.$error.max">Amount
+								should be between 11 and 999999 digits only.</span> </span>
+					</div>
+				</div>
+				<div class="form-group styled-input col-md-4 col-xs-12">
+					<input type="text" class="form-control" ng-model="ehprc.pageDetails.userData.behalf"
+					name="behalfS" ng-maxlength="50" ng-pattern="/^[A-Za-z ]*$/"
+					required />
+					<label class="control-label" for="inputLarge">On
+						Behalf of</label>
+					<div class="help-block err">
+						<span
+						ng-show="userForm.behalfS.$dirty && userForm.behalfS.$invalid"> <span
+							ng-show="userForm.behalfS.$error.pattern">Please enter valid name for behalf of.</span> </span>
+					</div>
+				</div></form>
+		</div>
+		<div class="col-sm-12 usrinfo_cnt clearfix pay_details">
+			<div class="col-sm-12">
+				<strong>Payment option</strong>
+				<p class="help-block">
+					Note: Pilgrims can use any Bank Debit/Credit cards with following payment gateway
+				</p>
+			</div>
+			<div class="col-md-3 col-sm-6" ng-repeat = "bank in ehprc.banksList">
+				<div class="col-sm-2 col-xs-3">
+					<input type="radio" name="bankName" id="{{bank.paymentGatewayName}}" value="{{bank.pgId}}" ng-model="ehprc.bankName">
+				</div>
+				<div class="col-sm-10 col-xs-9">
+					<strong>{{bank.paymentGatewayName}}</strong>
+					<span class="help-block">{{bank.paymentGatewayName}}</span>
+				</div>
+			</div>
+		</div>
+		<div class="col-md-12 col-xs-12 clearfix mtop_60">
+			<div class="col-md-7">
+				Click on Pay Now confirm your Acceptance to the <a class="terms">Terms and Conditions </a>
+			</div>
+			<script>
+				// resp menu
+				$('.terms').click(function() {
+
+					if($('.modal').css("display") == "none") {
+						$('.modal').show();
+
+					} else {
+						$('.modal').hide();
+
+					}
+				});
+				$('.close').click(function() {
+
+					$('.modal').hide();
+
+				});
+
+			</script>
+		</div>
+		<form ng-show='false' method="get" action="http://172.16.100.12:8080/eHundi/pg/tekpgRequest.jsp" >
+			<input type="text" name="mobileNumber" value="{{ehprc.pageDetails.userData.piligrimPhoneMobile}}"/>
+			<input type="text" name="firstName" value="{{ehprc.pageDetails.userData.piligrimFirstName}}"/>
+			<input type="text" name="lastName" value="{{ehprc.pageDetails.userData.piligrimLastName}}"/>
+			<input type="text" name="orderId"  value="{{ehprc.pageDetails.userData.orderId}}"/>
+			<input type="text" name="userId"   value="{{ehprc.pageDetails.userData.userId}}"/>
+			<input type="text" name="email"   value="{{ehprc.pageDetails.userData.piligrimEmail}}"/>
+			<input type="text" name="amount"  value="{{ehprc.pageDetails.userData.offeringAmount}}"/>
+			<input type="text" name="pgId" value="{{ehprc.bankName}}"/>
+			<input type="submit" id="hiddenFormClick"value="submit">
+		</form>
+		<div class="col-md-12 text-right btn_cnt">
+			<button class="btn btn-act" ng-click="ehprc.payMoney();submitted=true">
+				Paynow
+			</button>
+		</div>
+	</div>
+</div>

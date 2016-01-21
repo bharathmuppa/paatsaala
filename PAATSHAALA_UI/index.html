@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="TTD">
+	<head>
+		<meta charset="utf-8" />
+		<!-- Always force latest IE rendering engine (even in intranet) & Chrome Frame
+		Remove this if you use the .htaccess -->
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="Keywords" content="darshanam,donations,bookings..." />
+		<meta name="description" content="it is a online portal for booking the darshanam and giving the donations ..." />
+		<title>TTD</title>
+		<link rel="stylesheet" href="content/libs/css/bootstrap.min.css">
+		<link rel="stylesheet" href="content/libs/css/bootstrap-theme.min.css">
+		<!-- TTD Styles -->
+		<link rel="stylesheet" href="content/styles/ttd_main.css">
+		<link rel="stylesheet" href="content/styles/ttd_media.css">
+	</head>
+	<body ng-controller="BodyController as bdc" ng-cloak>
+		<!--directive for header&menu -->
+		<div header-directive></div>
+		<!-- container view -->
+		<div id="container" ng-view></div>
+		<!-- libs -->
+		<script src="content/libs/js/jquery.min.js"></script>
+		<script src="content/libs/js/bootstrap.min.js"></script>
+		<script src="content/libs/js/angular.min.js"></script>
+		<script src="content/libs/js/angular-route.min.js"></script>
+		<!-- app bootstrapping -->
+		<script src="app/app.module.js"></script>
+		<script src="app/app.config.js"></script>
+		<!-- factories/directives/others -->
+		<script src="app/services/login.factory.js"></script>
+		<script src="app/services/service.factory.js"></script>
+		<script src="app/eHundi/commondata.factory.js"></script>
+		
+		<script src="app/components/common.js"></script>
+		<script src="app/components/header.js"></script>
+		<!--controllers -->
+		<!-- main controller -->
+		<script src="app/body.controller.js"></script>
+		<!-- eHundi -->
+		<script src="app/eHundi/details.controller.js"></script>
+		<script src="app/eHundi/anonymous.payment.controller.js"></script>
+		<script src="app/eHundi/payment.acknowledgement.controller.js"></script>
+		<script src="app/eHundi/payment.failure.controller.js"></script>
+		<script src="app/eHundi/registered.payment.controller.js"></script>
+		<script src="app/eHundi/history.controller.js"></script>
+	</body>
+</html>
