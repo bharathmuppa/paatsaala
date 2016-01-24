@@ -1,18 +1,20 @@
 // resp menu
+
+var serviceUrl="";
+var downloadUrl="";
 $( document ).ready(function() {
 	
-	$('.menu').click(function() {
-	if ($('.side_nav').css("right") == "-200px") {
-		$('.side_nav').animate({
-			right : "10px"
-		});
+	
 
-	} else {
-		$('.side_nav').animate({
-			right : "-200px"
-		});
-
-	}
-}); 
 	
 });
+function uniq(arrayName) {
+  var seen = new Set();
+  return arrayName.filter(function(x) {
+    return !seen.has(x) && seen.add(x);
+  });
+}
+function uniqueObjects(obj){
+	var obj=angular.copy(obj);
+	
+}

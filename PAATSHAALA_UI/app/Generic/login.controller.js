@@ -1,8 +1,8 @@
-angular.module('TTD').controller('EHundiPaymentController', EHundiPaymentController);
+angular.module('eduApp').controller('LoginController',LoginController);
 
-EHundiPaymentController.$inject = ['$scope', '$location', 'serviceFactory', 'commonDataFactory'];
+LoginController.$inject = ['$scope', '$location', 'serviceFactory', 'commonDataFactory'];
 
-function EHundiPaymentController($scope, $location, serviceFactory, commonDataFactory) {
+function LoginController($scope, $location, serviceFactory, commonDataFactory) {
 	/* jshint validthis: true */
 	var ehpc = this;
 	/*data for view*/

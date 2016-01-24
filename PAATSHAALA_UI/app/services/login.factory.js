@@ -1,6 +1,6 @@
 (function(){
 	
-	angular.module('TTD').factory('loginFactory', LoginFactory);
+	angular.module('eduApp').factory('loginFactory', LoginFactory);
 	
 	LoginFactory.$inject=[];
 	

@@ -1,4 +1,4 @@
-angular.module('TTD').factory('serviceFactory', ServiceFactory);
+angular.module('eduApp').factory('serviceFactory', ServiceFactory);
 
 ServiceFactory.$inject = ['$http'];
 

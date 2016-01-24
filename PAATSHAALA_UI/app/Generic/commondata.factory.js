@@ -1,19 +1,16 @@
 (function() {
 
-	angular.module('TTD').factory('commonDataFactory', commonDataFactory);
+	angular.module('eduApp').factory('commonDataFactory', commonDataFactory);
 
 	commonDataFactory.$inject = [];
 
 	function commonDataFactory() {
 
 		var userdata = {};
-		var bankList = [];
 		var historyList = [];
 		var commonDataObject = {
 			setUserData : setUserData,
 			getUserData : getUserData,
-			setBankList : setBankList,
-			getBankList : setBankList,
 			setHistoryList : setHistoryList,
 			getHistoryList : getHistoryList
 		};
@@ -29,21 +26,17 @@
 			return userdata;
 		}
 
-		function setBankList(reqParams) {
-			bankList = reqParams;
-		};
-
-		function getBankList() {
-			return bankList;
-		}
 
 		/*historylist getters/setters */
 		function setHistoryList(reqParams) {
-			historyList = reqParams;
+			historyList = historyList.push(reqParams);
 		}
 
 		function getHistoryList() {
 			return historyList;
+		}
+		function emptyHistory(){
+			historyList=[];
 		}
 
 	}//end of LoginFactory

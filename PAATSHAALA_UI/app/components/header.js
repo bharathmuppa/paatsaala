@@ -28,7 +28,7 @@
 					$('.side_nav').css('top', -$('.hundi_hd').outerHeight());
 				});
 			}
-		}
+		};
 
 	}
 

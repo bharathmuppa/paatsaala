@@ -1,4 +1,4 @@
 (function() {
-	angular.module('TTD', ['ngRoute']);
+	angular.module('eduApp', ['ngRoute']);
 	
 }());

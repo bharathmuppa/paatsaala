@@ -20,7 +20,7 @@ function InputValidation() {
 						break;
 					default:
 						break;
-				}
+				};
 
 				function modifyValues() {
 					var a = angular.element(e.currentTarget).val();
@@ -98,5 +98,5 @@ function InputValidation() {
 
 			});
 		}
-	}
+	};
 }
